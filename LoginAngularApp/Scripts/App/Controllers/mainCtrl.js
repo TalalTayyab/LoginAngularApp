@@ -3,15 +3,15 @@
     var app = angular.module("loginApp");
 
     //mainCtrl
-    app.controller('mainCtrl', ['$scope', 'loginAspNet','$location', function ($scope, loginAspNet,$location) {
+    app.controller('mainCtrl', ['$scope', 'loginAspNet', '$location', 'LA_CONFIG', function ($scope, loginAspNet, $location, LA_CONFIG) {
 
-        $scope.title = "Login app";
+        $scope.title = LA_CONFIG.MSG.TITLE;
 
        
 
         $scope.logOff = function () {
             loginAspNet.logOff();
-            $location.path('login');
+            $location.path(LA_CONFIG.URL.LOGIN);
         };
 
         $scope.loggedIn = function () {

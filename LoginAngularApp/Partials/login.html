@@ -1,9 +1,12 @@
 ﻿
-<div class="container">
+
 
 
     <div ng-show="loggedIn()">
-        <p class="well">Already logged in as {{loggedInUser()}}</p>
+        <p class="well">Already logged in as {{loggedInUser()}}
+            <user-login></user-login>
+        </p>
+        
     </div>
 
 
@@ -146,4 +149,4 @@
         </div>
     </div>
 
-</div>
+

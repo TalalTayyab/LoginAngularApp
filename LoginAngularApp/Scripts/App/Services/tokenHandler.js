@@ -2,22 +2,24 @@
 
     var app = angular.module("loginApp");
 
-    //Service for storage of items.
-    app.factory("tokenHandler", function () {
+    //wrapper to return store/return items from store.
+    app.factory("tokenHandler", ['storageHandler', 'LA_CONFIG', function (storageHandler, LA_CONFIG) {
 
-        var loginTokenId = "login_token_key";
-        var nameTokenId = "login_name_token_key";
+        var loginTokenId = LA_CONFIG.ID.STORAGE_LOGIN_TOKEN_KEY;
+        var nameTokenId = LA_CONFIG.ID.STORAGE_LOGIN_NAME_KEY;
         var redirectUrl = null;
 
         return {
             setLoginToken: function (token) {
-                sessionStorage.setItem(loginTokenId, token);
+                storageHandler.setItem(loginTokenId, token);
+                
             },
             getLoginToken: function () {
-                return sessionStorage.getItem(loginTokenId);
+                return storageHandler.getItem(loginTokenId);
+
             },
             removeLoginToken: function () {
-                sessionStorage.removeItem(loginTokenId);
+                storageHandler.removeItem(loginTokenId);
             },
             hasLoginToken: function () {
                 return this.getLoginToken() != null;
@@ -29,12 +31,12 @@
                 return redirectUrl;
             },
             setLoginName: function (name) {
-                sessionStorage.setItem(nameTokenId, name);
+                storageHandler.setItem(nameTokenId, name);
             },
             getLoginName: function () {
-                return sessionStorage.getItem(nameTokenId);
+                return storageHandler.getItem(nameTokenId);
             }
         }
-    });
+    }]);
 
 }());

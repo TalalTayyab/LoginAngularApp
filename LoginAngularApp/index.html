@@ -44,9 +44,10 @@
 
     <div class="container">
 
-        <user-info></user-info>
-        <div ng-view></div>
-
+        <div class="container">
+            
+            <div ng-view></div>
+        </div>
 
     </div>
 
@@ -54,6 +55,7 @@
     <script src="Scripts/Angular/angular.js"></script>
     <script src="Scripts/Angular/angular-route.js"></script>
     <script src="Scripts/Angular/angular-messages.js"></script>
+    <script src="Scripts/Angular/angular-cookies.js"></script>
 
     <!--module-->
     <script src="Scripts/App/module.js"></script>
@@ -72,6 +74,7 @@
     <script src="Scripts/App/Services/messageHandler.js"></script>
     <script src="Scripts/App/Services/personDataHandler.js"></script>
     <script src="Scripts/App/Services/tokenHandler.js"></script>
+    <script src="Scripts/App/Services/storageHandler.js"></script>
 
 </body>
 </html>

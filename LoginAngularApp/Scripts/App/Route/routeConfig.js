@@ -4,16 +4,10 @@
 
 
     //routing
-    app.config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/person-list', {
+    app.config(['$routeProvider', 'LA_CONFIG', function ($routeProvider, LA_CONFIG) {
+        $routeProvider.when('/' + LA_CONFIG.URL.LOGIN, {
 
-            templateUrl: 'partials/person-list.html',
-            requiresLogin: true,
-            controller: "personListCtrl"
-
-        }).when('/login', {
-
-            templateUrl: 'partials/login.html',
+            templateUrl: LA_CONFIG.TMPL.LOGIN,
             requiresLogin: false
 
         }).when('/person/:id', {
@@ -21,6 +15,12 @@
             templateUrl: 'partials/person.html',
             requiresLogin: true,
             controller: "personCtrl"
+
+        }).when('/person-list', {
+
+            templateUrl: 'partials/person-list.html',
+            requiresLogin: true,
+            controller: "personListCtrl"
 
         }).otherwise({
 

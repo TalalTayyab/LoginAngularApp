@@ -151,7 +151,10 @@
     <Content Include="Partials\person-list.html" />
     <Content Include="Partials\person.html" />
     <Content Include="Partials\userLogin.html" />
+    <Content Include="Scripts\Angular\angular-cookies.js" />
+    <Content Include="Scripts\Angular\angular-cookies.min.js" />
     <Content Include="Scripts\Angular\angular-messages.js" />
+    <Content Include="Scripts\Angular\angular-messages.min.js" />
     <Content Include="Scripts\Angular\angular-mocks.js" />
     <Content Include="Scripts\Angular\angular-route.js" />
     <Content Include="Scripts\Angular\angular-route.min.js" />
@@ -168,6 +171,7 @@
     <Content Include="Scripts\App\Services\loginAspNet.js" />
     <Content Include="Scripts\App\Services\messageHandler.js" />
     <Content Include="Scripts\App\Services\personDataHandler.js" />
+    <Content Include="Scripts\App\Services\storageHandler.js" />
     <Content Include="Scripts\App\Services\tokenHandler.js" />
     <Content Include="Scripts\Bootstrap\bootstrap.js" />
     <Content Include="Scripts\Bootstrap\bootstrap.min.js" />
@@ -195,6 +199,12 @@
   <ItemGroup>
     <Content Include="Scripts\Angular\angular-route.min.js.map" />
     <Content Include="Scripts\Angular\angular.min.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\Angular\angular-messages.min.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\Angular\angular-cookies.min.js.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -11,10 +11,10 @@
 
         return {
 
-            login: function (username, password, onSuccess, onError) {
+            login: function (url,username, password, onSuccess, onError) {
 
                 $http({
-                    url: 'token',
+                    url: url,
                     method: 'POST',
                     data: "userName=" + username + "&password=" + password + "&grant_type=password"
                 }).success(function (data) {

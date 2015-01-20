@@ -11,7 +11,7 @@
             getError: function (err) {
                 var msg = {};
 
-                msg.title = angular.isDefined(err.error) ? err.error : "Error";
+                msg.title = angular.isDefined(err.error) ? err.error : "";
                 msg.desc = angular.isDefined(err.error_description) ? err.error_description : (angular.isDefined(err.Message) ? err.Message : err);
                 msg.hasError = true;
                 msg.hasSucc = false;
