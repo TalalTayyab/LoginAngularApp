@@ -1,0 +1,29 @@
+﻿
+
+<div class="container">
+
+    <div class="panel panel-default" >
+        <div class="panel-heading">
+            Persons List
+        </div>
+        <div class="panel-body">
+
+            <div class="alert alert-warning " role="alert" ng-show="msg.hasError">
+
+                <strong>{{msg.title}}</strong>
+                <p>
+                    {{msg.desc}}
+                </p>
+            </div>
+
+            <ol>
+                <li ng-repeat="person in persons">
+                    <a href="" ng-click="showPerson(person)">{{person.name}}</a>
+                </li>
+            </ol>
+        </div>
+
+     
+    </div>
+
+</div>

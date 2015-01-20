@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html ng-app="loginApp">
+<head ng-app="loginApp">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{{title}}</title>
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+
+
+
+</head>
+<body ng-controller="mainCtrl">
+
+    <div class="navbar navbar-inverse ">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand">AngularJS Login App</span>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="" ng-click="browse('person-list')">Persons</a></li>
+
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li user-login>
+
+                    </li>
+
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container">
+
+        <user-info></user-info>
+        <div ng-view></div>
+
+
+    </div>
+
+    <script src="Scripts/Bootstrap/respond.js"></script>
+    <script src="Scripts/Angular/angular.js"></script>
+    <script src="Scripts/Angular/angular-route.js"></script>
+    <script src="Scripts/Angular/angular-messages.js"></script>
+
+    <!--module-->
+    <script src="Scripts/App/module.js"></script>
+    <!-- controllers-->
+    <script src="Scripts/App/Controllers/loginctrl.js"></script>
+    <script src="Scripts/App/Controllers/mainCtrl.js"></script>
+    <script src="Scripts/App/Controllers/personCtrl.js"></script>
+    <script src="Scripts/App/Controllers/personListCtrl.js"></script>
+    <!--directives-->
+    <script src="Scripts/App/Directive/directive.js"></script>
+    <script src="Scripts/App/Directive/validations.js"></script>
+    <!--route-->
+    <script src="Scripts/App/Route/routeConfig.js"></script>
+    <!--services-->
+    <script src="Scripts/App/Services/loginAspNet.js"></script>
+    <script src="Scripts/App/Services/messageHandler.js"></script>
+    <script src="Scripts/App/Services/personDataHandler.js"></script>
+    <script src="Scripts/App/Services/tokenHandler.js"></script>
+
+</body>
+</html>

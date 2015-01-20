@@ -1,0 +1,38 @@
+﻿
+
+<div class="container">
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            {{person.name}} Info
+        </div>
+
+        <div class="panel-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{person.id}}</td>
+                        <td>{{person.name}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="alert alert-warning " role="alert" ng-show="msg.hasError">
+
+    <strong>{{msg.title}}</strong>
+    <p>
+        {{msg.desc}}
+    </p>
+</div>
